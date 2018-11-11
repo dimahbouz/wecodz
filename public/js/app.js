@@ -60,28 +60,39 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1);
-module.exports = __webpack_require__(2);
+__webpack_require__(6);
+module.exports = __webpack_require__(52);
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
 
-console.log('Salut tout le monde');
-
-/***/ }),
-/* 2 */
+/***/ 52:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
+/***/ }),
+
+/***/ 6:
+/***/ (function(module, __webpack_exports__) {
+
+"use strict";
+fetch('/api/user', {
+    credentials: 'same-origin',
+    headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    }
+});
+
 /***/ })
-/******/ ]);
+
+/******/ });
